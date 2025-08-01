@@ -1,3 +1,4 @@
+rps
 
 # THIS IS MY ROCK PAPER SCISSORS GAME
 # this is the "app/rps.py" file...
@@ -42,3 +43,4 @@ if __name__ == "__main__":
 
     result_message = determine_winner(player_choice, computer_choice)
     print(result_message)
+

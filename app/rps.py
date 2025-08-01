@@ -1,18 +1,11 @@
-# this is my ROCK PAPER SCISSORS GAME
 
-print("welcome to my game")
-
-player_choice=input("Please select and option from rock, paper scissors")
-print("User Chose:",player_choice)
+# THIS IS MY ROCK PAPER SCISSORS GAME
+# this is the "app/rps.py" file...
 
 import random
 
-VALID_OPTIONS= ["rock","paper","scissors"]
+VALID_OPTIONS = ["rock", "paper", "scissors"]
 
-computer_choice = random.choice(VALID_OPTIONS)
-print("COMPUTER CHOSE:", computer_choice)
-
-# bottom of the app/rps.py file:
 def determine_winner(u, c):
     if u == c:
         result = "TIE GAME"
@@ -25,10 +18,27 @@ def determine_winner(u, c):
     elif u == "scissors" and c == "paper":
         result = "USER WINS"
     elif u == "paper" and c == "rock":
-        result = "COMP WINS"
+        #result = "COMP WINS" # OOPS THAT WAS A BUG :-/
+        result = "USER WINS" # BUG FIXED!!! :-)
     elif u == "paper" and c == "scissors":
         result = "COMP WINS"
     return result
 
-result_message = determine_winner(player_choice, computer_choice)
-print(result_message)
+
+# ONLY RUN THE CODE INDENTED INSIDE
+# ... IF WE ARE RUNNING THIS SCRIPT FROM THE COMMAND LINE
+# ... BUT NOT IF WE ARE IMPORTING
+if __name__ == "__main__":
+
+    print("WELCOME TO MY GAME...")
+
+    player_choice = input("Please select an option ('rock', 'paper', 'scissors'): ")
+    print("USER CHOSE:", player_choice)
+
+    # todo: validation step
+
+    computer_choice = random.choice(VALID_OPTIONS)
+    print("COMPUTER CHOSE:", computer_choice)
+
+    result_message = determine_winner(player_choice, computer_choice)
+    print(result_message)

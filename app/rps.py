@@ -1,4 +1,3 @@
-rps
 
 # THIS IS MY ROCK PAPER SCISSORS GAME
 # this is the "app/rps.py" file...
